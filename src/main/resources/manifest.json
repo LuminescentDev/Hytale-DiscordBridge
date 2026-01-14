@@ -1,0 +1,17 @@
+{
+  "Group": "dev.bwmp",
+  "Name": "DiscordBridge",
+  "Version": "1.0.0",
+  "Description": "Bridge between Hytale in-game chat and Discord",
+  "Authors": [
+    {
+      "Name": "bwmp"
+    }
+  ],
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": false,
+  "Main": "dev.bwmp.discordbridge.DiscordBridge"
+}

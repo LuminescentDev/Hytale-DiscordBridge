@@ -1,0 +1,15 @@
+{
+  "discord": {
+    "botToken": "YOUR_BOT_TOKEN_HERE",
+    "channelId": "YOUR_CHANNEL_ID_HERE",
+    "adminRoleId": "YOUR_ADMIN_ROLE_ID_HERE"
+  },
+  "messages": {
+    "discordToGame": "[Discord] {username}: {message}",
+    "gameToDiscord": "**{player}**: {message}",
+    "playerJoin": ":green_circle: **{player}** joined the server",
+    "playerLeave": ":red_circle: **{player}** left the server",
+    "serverStart": ":white_check_mark: Server has started",
+    "serverStop": ":stop_sign: Server is stopping"
+  }
+}
