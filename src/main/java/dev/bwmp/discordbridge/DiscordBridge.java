@@ -8,13 +8,13 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
-
 import dev.bwmp.discordbridge.discord.DiscordBot;
 import dev.bwmp.discordbridge.discord.commands.impl.ConsoleCommand;
 import dev.bwmp.discordbridge.discord.commands.impl.HelpCommand;
 import dev.bwmp.discordbridge.discord.commands.impl.ListCommand;
 import dev.bwmp.discordbridge.events.ChatListener;
 import dev.bwmp.discordbridge.events.ConnectionListener;
+import dev.bwmp.discordbridge.events.PlayerDeathSystem;
 
 import javax.annotation.Nonnull;
 import java.io.IOException;
@@ -57,6 +57,9 @@ public class DiscordBridge extends JavaPlugin {
 
         // Register Discord commands
         registerCommands();
+
+        // Register ECS system for death detection
+        this.getEntityStoreRegistry().registerSystem(new PlayerDeathSystem());
 
         // Register event listeners
         this.getEventRegistry().registerGlobal(PlayerChatEvent.class, ChatListener::onPlayerChat);

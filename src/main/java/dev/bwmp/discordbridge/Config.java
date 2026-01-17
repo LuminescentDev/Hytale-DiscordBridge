@@ -104,6 +104,9 @@ public class Config {
         @SerializedName("serverStop")
         private String serverStop;
 
+        @SerializedName("playerDeath")
+        private String playerDeath;
+
         void applyDefaults() {
             if (discordToGame == null) discordToGame = "[Discord] {username}: {message}";
             if (gameToDiscord == null) gameToDiscord = "**{player}**: {message}";
@@ -111,6 +114,7 @@ public class Config {
             if (playerLeave == null) playerLeave = ":red_circle: **{player}** left the server";
             if (serverStart == null) serverStart = ":white_check_mark: Server has started";
             if (serverStop == null) serverStop = ":stop_sign: Server is stopping";
+            if (playerDeath == null) playerDeath = ":skull: **{player}** has died: {reason}";
         }
 
         public String getDiscordToGame() {
@@ -135,6 +139,10 @@ public class Config {
 
         public String getServerStop() {
             return serverStop;
+        }
+
+        public String getPlayerDeath() {
+            return playerDeath;
         }
     }
 }
